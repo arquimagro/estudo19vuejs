@@ -5,8 +5,8 @@ const props = defineProps(['tarefas'])
 <template>
     <ul class="list-group mt-4">
         <li class="list-group-item" v-for="tarefa in props.tarefas">
-            <input type="checkbox" @change="evento => tarefa.finalizada = evento.target.checked" :checked="tarefa.finalizada"
-                :id="tarefa.titulo" >
+            <input type="checkbox" @change="evento => tarefa.finalizada = evento.target.checked"
+                :checked="tarefa.finalizada" :id="tarefa.titulo">
             <label :class="{ done: tarefa.finalizada }" class="ms-3" :for="tarefa.titulo">
                 {{ tarefa.titulo }}
             </label>
